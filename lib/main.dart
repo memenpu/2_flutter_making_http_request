@@ -33,6 +33,9 @@ class Post {
 }
 
 void main() => runApp(MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.red
+      ),
       home: MyApp(),
     ));
 
@@ -45,6 +48,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("title"),
+      ),
       body: Center(
         child: FutureBuilder<Post>(
           future: fetchPost(),
